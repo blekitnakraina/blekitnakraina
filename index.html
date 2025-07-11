@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Żłobek Błękitna Kraina</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <img src="images/logo.png" alt="Logo Błękitna Kraina" class="logo" />
+  <h1>Żłobek "Błękitna Kraina"</h1>
+  <nav>
+    <a href="#o-nas">O nas</a>
+    <a href="#oferta">Oferta</a>
+    <a href="#kontakt">Kontakt</a>
+	<a href="#galeria">Galeria</a>
+	<a href="#opinie">Opinie rodziców</a>
+  </nav>
+</header>
+
+  <section id="o-nas">
+    <h2>O nas</h2>
+    <p><strong>Adres:</strong> Kraków, ul. Sołtysowska 11/1</p>
+    <p><strong>Działamy od:</strong> 2023 roku</p>
+    <p><strong>Misja:</strong> Wszechstronny rozwój dzieci do lat 3 przez zabawę.</p>
+	<p>Nasza placówka to miejsce, gdzie małe dzieci otoczone są troskliwą opieką i mają możliwość wszechstronnego rozwoju na różnych płaszczyznach.</p>
+    <p>Pracujemy w grupach 4-5 osobowych z dziećmi w wieku od roku do 3 lat. Niewielkie grupy pozwalają nam zadbać o indywidualne potrzeby każdego malucha.</p>
+	<p>Nasza kadra posiada odpowiednie przygotowanie do pracy z dziećmi i stale podnosi swoje kwalifikacje. Współpracujemy z psychologiem oraz neurologopedą.</p>
+  </section>
+
+  <section id="oferta">
+    <h2>Oferta</h2>
+    <p><strong>Godziny pracy:</strong> 7:00 – 17:00</p>
+    <ul>
+      <li>Logorytmika smyka</li>
+      <li>Gimnastyka smyka</li>
+      <li>Zabawy z językiem angielskim</li>
+      <li>Sensoplastyka</li>
+      <li>Muzyczne zabawy sensoryczne</li>
+      <li>Warsztaty tematyczne</li>
+	  <li>Dogoterapia</li>
+    </ul>
+  </section>
+  
+    <section id="galeria">
+    <h2>Galeria</h2>
+    
+    </ul>
+  </section>
+
+  <section id="opinie">
+  <h2>Opinie rodziców</h2>
+  
+  <div id="lista-opinii">
+    <!-- Opinie pojawią się tutaj -->
+  </div>
+
+  <form id="formularz-opinii">
+    <input type="text" id="autor" placeholder="Twoje imię" required />
+    <textarea id="tresc" placeholder="Twoja opinia..." required></textarea>
+    <button type="submit">Dodaj opinię</button>
+  </form>
+</section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p><strong>Adres:</strong> Kraków, ul. Sołtysowska 11/1</p>
+    <p><strong>Email:</strong> kontaktblekitnakraina@gmail.com</p>
+    <p><strong>Telefon:</strong> 539 387 857</p>
+  </section>
+ 
+
+  <footer>
+    <p>&copy; 2025 Żłobek "Błękitna Kraina" – Wszelkie prawa zastrzeżone.</p>
+  </footer>
+  
+  <script>
+  const form = document.getElementById('formularz-opinii');
+  const lista = document.getElementById('lista-opinii');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const autor = document.getElementById('autor').value.trim();
+    const tresc = document.getElementById('tresc').value.trim();
+
+    if (autor && tresc) {
+      const opinia = document.createElement('div');
+      opinia.className = 'opinia';
+      opinia.innerHTML = `<p><strong>${autor}:</strong> ${tresc}</p>`;
+      lista.appendChild(opinia);
+
+      form.reset();
+    }
+  });
+</script>
+</body>
+</html>
+
+</body>
+</html>
